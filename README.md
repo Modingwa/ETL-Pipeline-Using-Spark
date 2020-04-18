@@ -24,6 +24,7 @@ The dataset for the project resides in S3, in a directory of JSON logs on user a
 In addition to the data files, the project workspace includes:
 * **etl.py** - reads data from S3, processes that data using Spark, and writes processed data as a set of dimensional tables back to S3
 * **dl.cfg** - contains configuration that allows the ETL pipeline to access AWS EMR cluster. 
+* **etl-prototype.ipynb** - jupyter notebook that was used for building the ETL pipeline.
 
 ## Prerequisites
 * AWS EMR cluster
