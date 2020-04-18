@@ -18,7 +18,7 @@ The data for the data lake resides in S3, in a directory of JSON logs on user ac
 
 ## Data and Code
 The dataset for the project resides in S3, in a directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in Sparkify app.
-> s3a://udacity-dend/song_data/ - JSON metadata on the songs in Sparkify's music streaming app
+> s3a://udacity-dend/song_data/ - JSON metadata on the songs in Sparkify's music streaming app.  
 > s3a://udacity-dend/log_data/ - JSON files containing log events from the Sparkify's music streaming app.  
 
 In addition to the data files, the project workspace includes:
@@ -36,7 +36,7 @@ python 3 is needed to run the python scripts.
 
 ## Deployment
 The following command is used to move files from local development machine to AWS EMR cluster:
-> scp -i <aws perm file> <Local-Path> <username>@<EMR-MasterNode-Endpoint>:~/<EMR-path>
+> `scp -i <aws perm file> <Local-Path> <username>@<EMR-MasterNode-Endpoint>:~/<EMR-path>`
 
 Use this command to move the etl.py and dl.cfg files to EMR cluster.
 
@@ -61,7 +61,7 @@ The ETL pipeline saves the data into **s3://sparkprojectdata/<table-name>**
 ## Instructions on running the application
 * You must have an access to an AWS EMR cluster
 * Issue the following command to run the ETL pipeline:
-    * /usr/bin/spark-submit --master yarn ./etl.py
+    * `/usr/bin/spark-submit --master yarn ./etl.py`
 ### Note: 
 * This commancd assumes that the spark-submit is on /usr/bin, change if different.
 * Ensure that AWS EMR has access to S3
